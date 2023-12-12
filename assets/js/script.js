@@ -1,0 +1,1 @@
+fetch(assets/json/ecommerce.json, options)
