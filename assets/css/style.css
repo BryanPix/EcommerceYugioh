@@ -1,5 +1,5 @@
 body{
-    background: url('/assets/img/HieroglypheBG.jpg') repeat;
+    background: url('../img/HieroglypheBG.jpg') repeat;
 } 
 
 .popup {
@@ -76,7 +76,11 @@ body{
   }
 
 
-.flip-card{
-    display: flex;
-    justify-content: center;
+  /* Don't touch */
+.coreCard{
+  position: absolute;
+  top:22vh;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
