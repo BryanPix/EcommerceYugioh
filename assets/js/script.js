@@ -1,3 +1,5 @@
+let yugiohDiv = document.querySelector('.yugiCard');
+
 // Popup
 window.onload = () => {
   let popup = document.querySelector(".popup");
@@ -23,4 +25,12 @@ fetch("assets/json/ecommerce.json", {
   },
 })
   .then((response) => response.json())
-  .then((response) => console.log(JSON.stringify(response)));
+  .then(data => {
+    // for (let i = 0; i < ${ART_ID}.length; i++) {
+      
+    // }
+    console.log(data);
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
