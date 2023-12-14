@@ -12,8 +12,8 @@ flipInner.addEventListener("click", function () {
   flipInner.style.transform = "rotateY(180deg)";
   // const audio = new Audio('assets/sound/cest-lheure-du-du-duel.mp3');
 });
-let backCard = document.querySelector(".flip-card-back");
-backCard.addEventListener("click", function () {
+let frontCard = document.querySelector(".flip-card-front");
+frontCard.addEventListener("click", function () {
   card.style.display = "none";
 });
 
@@ -26,9 +26,7 @@ fetch("assets/json/ecommerce.json", {
 })
   .then((response) => response.json())
   .then(data => {
-    // for (let i = 0; i < ${ART_ID}.length; i++) {
-      
-    // }
+
     console.log(data);
   })
   .catch(error => {

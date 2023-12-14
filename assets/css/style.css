@@ -45,13 +45,13 @@ body {
 }
 
 /* Style the front side (fallback if image is missing) */
-.flip-card-front {
+.flip-card-back {
   background-color: #bbb;
   color: black;
 }
 
 /* Style the back side */
-.flip-card-back {
+.flip-card-front {
   background-color: dodgerblue;
   color: white;
   transform: rotateY(180deg);
@@ -87,13 +87,10 @@ box-shadow: 10px 5px 5px #12151c;
   color: white;
 }
 .panier:hover{
-  background-color: #12151c;
-  border-radius: 5px;
 	padding-right: 7px;
-  transition: 0.6s;
+  transition: 0.7s;
+  transform: scale(1.2);
 }
-
-
 
 
 /* scrollbar */
@@ -133,6 +130,7 @@ box-shadow: 10px 5px 5px #12151c;
 	padding: 80px 0;
 }
 
+
 .container {
 	max-width: 1170px;
 	margin: auto;
@@ -145,7 +143,7 @@ box-shadow: 10px 5px 5px #12151c;
 
 ul {
 	list-style: none;
-
+  padding-left: 0;
 }
 
 .footer-col {
@@ -188,11 +186,11 @@ ul {
 
 .footer-col ul li a:hover {
 	color: #FFF;
-	padding-left: 7px;
-  background-color: #12151c;
-  background-size:auto;
-  border-radius: 5px;
+	margin-left: 20px;
   transition: 0.6s;
+  text-decoration: underline ;
+  transform: scale(1.2);
+
 }
 
 .footer-col .social-links a {
@@ -224,4 +222,24 @@ ul {
 	.footer-col {
 		width: 100%;
 	}
+}
+
+
+.clickHere {
+  position: relative;
+  top: 20rem;
+  width: 5rem;
+  animation: grow-shrink 1.3s infinite alternate;
+}
+
+
+/* animation */
+
+@keyframes grow-shrink {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.5);
+  }
 }
