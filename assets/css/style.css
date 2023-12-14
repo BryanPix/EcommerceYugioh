@@ -125,9 +125,10 @@ box-shadow: 10px 5px 5px #12151c;
 
 /* Footer */
 
-.footer {
+footer {
 	background-color: #191d26;
-	padding: 80px 0;
+	padding: 50px 0;
+  
 }
 
 
