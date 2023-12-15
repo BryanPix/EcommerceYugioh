@@ -14,6 +14,8 @@ frontCard.addEventListener("click", function () {
   cardYug.style.display = "none";
 });
 
+// fetch JSON pour recup les infos sur les articles vendus
+
 fetch('assets/json/ecommerce.json')
   .then(response => response.json())
   .then(data => {

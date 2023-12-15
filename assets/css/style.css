@@ -289,14 +289,14 @@ ul {
 
 }
 
+/* Animation clique du PopUp */
+
 .clickHere {
   position: relative;
   top: 20rem;
   width: 5rem;
   animation: grow-shrink 1.3s infinite alternate;
 }
-
-/* animation */
 
 @keyframes grow-shrink {
   0% {
