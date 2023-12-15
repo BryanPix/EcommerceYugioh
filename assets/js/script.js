@@ -27,7 +27,7 @@ fetch('assets/json/ecommerce.json')
       
       // Remplissage de la carte avec les données de l'élément
       cardEl.innerHTML = `
-      <div class="elCardBoot" style="width: 18rem;">
+      <div class="elCardBoost" >
       <img class="card-img-top" src="assets/img/${article.ART_PICTURE}" alt="image Booster" >
       <div class="card-body">
       <h5 class="card-title">${article.ART_Name}</h5>
