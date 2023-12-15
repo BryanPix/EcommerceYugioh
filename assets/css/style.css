@@ -1,18 +1,17 @@
 body {
   background: url("../img/HieroglypheBG.jpg") repeat;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1.2rem;
 }
-.nav-link{
+.nav-link {
   margin: 10px;
 }
-.nav-link:hover{
+.nav-link:hover {
   background-color: #12151c;
   border-radius: 5px;
-	padding-left: 7px;
+  padding-left: 7px;
   transition: 0.6s;
 }
-
 
 .popup {
   display: none;
@@ -57,7 +56,7 @@ body {
   transform: rotateY(180deg);
 }
 
-/* Ne pas toucher, sert a centrer la card*/
+/* Ne pas toucher, sert a centrer la card PopUP */
 .coreCard {
   position: absolute;
   top: 22vh;
@@ -67,164 +66,212 @@ body {
 }
 
 /* Navbar */
-.navbar{
-background-color: #191d26;
-box-shadow: 10px 5px 5px #12151c;
+.navbar {
+  background-color: #191d26;
+  box-shadow: 10px 5px 5px #12151c;
 }
-.navbar:hover{
+.navbar:hover {
   color: white;
 }
 
 /* icone shopping bag */
-.fa-bag-shopping{
+.fa-bag-shopping {
   font-size: 1.5rem;
 }
 
 /* panier */
-.panier{
+.panier {
   margin: 0 2.5rem 0 0;
   cursor: pointer;
   color: white;
-}
-.panier:hover{
-	padding-right: 7px;
-  transition: 0.7s;
-  transform: scale(1.2);
+  margin-left: 10px;
 }
 
 
+/* YU GI OH CARDS */
+
+.yugiCard {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  flex-flow: colum;
+}
+.card {
+  width: 320px;
+  height: 470px;
+}
+.btn{
+  background-color: rgba(207, 0, 15);
+}
+.btn:hover{
+  background-color: rgba(243, 3, 19, 0.932);
+}
 /* scrollbar */
 
-::-webkit-scrollbar-track
- {
-   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-   background-color: #F5F5F5;
- }
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #12151c;
+  background-image: -webkit-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.2) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0.2) 75%,
+    transparent 75%,
+    transparent
+  );
+}
+
+ /* Bouton Scroll To Top */
  
-::-webkit-scrollbar
- {
-   width: 10px;
-   background-color: #F5F5F5;
- }
- 
-::-webkit-scrollbar-thumb
- {
-   background-color: 	#12151c;	
-   background-image: -webkit-linear-gradient(45deg,
-                                             rgba(255, 255, 255, .2) 25%,
-                         transparent 25%,
-                         transparent 50%,
-                         rgba(255, 255, 255, .2) 50%,
-                         rgba(255, 255, 255, .2) 75%,
-                         transparent 75%,
-                         transparent)
- }
+ .returnTop {
+  position: sticky;
+  top: 17rem;
+  bottom: 40px;
+  right: 5rem;
+  color: white;
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a .bi {
+  color: rgba(255, 255, 255, 0.5);
+  position: relative;
+  left: 45%;
+}
+a :hover {
+  color: rgba(255, 255, 255, 0.9);
+}
 
 
+/* Section commentaire */
+.commentaire{
+  color: white;
+  text-align: center;
+  text-decoration: underline 2px;
+}
 
 
 /* Footer */
 
 footer {
-	background-color: #191d26;
-	padding: 50px 0;
-  
+  background-color: #191d26;
+  padding: 50px 0;
 }
 
-
 .container {
-	max-width: 1170px;
-	margin: auto;
+  max-width: 1170px;
+  margin: auto;
 }
 
 .row {
-	display: flex;
-	flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 ul {
-	list-style: none;
+  list-style: none;
   padding-left: 0;
 }
 
 .footer-col {
-	width: 25%;
-	padding: 0 15px;
+  width: 25%;
+  padding: 0 15px;
 }
 
 .footer-col h4 {
-	font-size: 18px;
-	color: #FFF;
-	text-transform: capitalize;
-	margin-bottom: 35px;
-	font-weight: 500;
-	position: relative;
+  font-size: 18px;
+  color: #fff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 300;
+  position: relative;
 }
 
 .footer-col h4::before {
-	content: "";
-	position: absolute;
-	left: 0;
-	bottom: -10px;
-	background-color: #E91E63;
-	width: 50px;
-	height: 2px;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #e91e63;
+  width: 50px;
+  height: 2px;
 }
 
 .footer-col ul li:not(:last-child) {
-	margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .footer-col ul li a {
-	color: #DDD;
-	display: block;
-	font-size: 1rem;
-	font-weight: 300;
-	text-transform: capitalize;
-	text-decoration: none;
-	transition: all 0.3s ease;
+  color: #ddd;
+  display: block;
+  font-size: 1rem;
+  font-weight: 300;
+  text-transform: capitalize;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
 .footer-col ul li a:hover {
-	color: #FFF;
-	margin-left: 20px;
-  transition: 0.6s;
-  text-decoration: underline ;
+  color: #e91e63 ;
+  margin-left: 20px;
+  transition: 0.4s ;
+  text-decoration: underline;
+  
   transform: scale(1.2);
-
 }
 
 .footer-col .social-links a {
-	color: #FFF;
-	background-color: rgba(255, 255, 255, 0.2);
-	display: inline-block;
-	height: 40px;
-	width: 40px;
-	border-radius: 50%;
-	text-align: center;
-	margin: 0 10px 10px 0;
-	line-height: 40px;
-	transition: all 0.5s ease;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.2);
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  text-align: center;
+  margin: 0 10px 10px 0;
+  line-height: 40px;
+  transition: all 0.5s ease;
 }
 
 .footer-col .social-links a:hover {
-	color: #151515;
-	background-color: #FFF;
+  color: #151515;
+  background-color: #fff;
 }
 
-@media(max-width: 767px) {
-	.footer-col {
-		width: 50%;
-		margin-bottom: 30px;
-	}
-}
 
-@media(max-width: 574px) {
-	.footer-col {
-		width: 100%;
-	}
+@media (min-width: 996px) {
+  .panier:hover {
+    padding-right: 7px;
+    transition: 0.4s;
+    transform: scale(1.2);
+  }
 }
+@media (max-width: 767px) {
+  .footer-col {
+    width: 50%;
+    margin-bottom: 30px;
+  }
 
+}
+@media (max-width: 574px) {
+  .footer-col {
+    width: 100%;
+  }
+
+}
 
 .clickHere {
   position: relative;
@@ -232,7 +279,6 @@ ul {
   width: 5rem;
   animation: grow-shrink 1.3s infinite alternate;
 }
-
 
 /* animation */
 

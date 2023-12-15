@@ -1,11 +1,9 @@
-let yugiohDiv = document.querySelector('.yugiCard');
-
 // Popup
 window.onload = () => {
   let popup = document.querySelector(".popup");
   popup.style.display = "block";
 };
-let card = document.querySelector(".card");
+let cardYug = document.querySelector(".cardYu");
 // retournement de la carte popup quand on clique dessus :D
 let flipInner = document.querySelector(".flip-card-inner");
 flipInner.addEventListener("click", function () {
@@ -13,7 +11,7 @@ flipInner.addEventListener("click", function () {
 });
 let frontCard = document.querySelector(".flip-card-front");
 frontCard.addEventListener("click", function () {
-  card.style.display = "none";
+  cardYug.style.display = "none";
 });
 
 fetch('assets/json/ecommerce.json')
@@ -26,13 +24,17 @@ fetch('assets/json/ecommerce.json')
     relevantData.forEach(article => {
       const cardEl = document.createElement('div');
       cardEl.classList.add('card');
-
+      
       // Remplissage de la carte avec les données de l'élément
       cardEl.innerHTML = `
-        <h2>${article.ART_Name}</h2>
-        <img src="assets/img/${article.ART_PICTURE}" alt="">
-        <p>Prix : ${article.ART_Price}</p>
-        <p>Description : ${article.ART_DESC}</p>
+      <div class="elCardBoot" style="width: 18rem;">
+      <img class="card-img-top" src="assets/img/${article.ART_PICTURE}" alt="image Booster" >
+      <div class="card-body">
+      <h5 class="card-title">${article.ART_Name}</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn">Ajouter au panier</a>
+      </div>
+      </div>
       `;
 
       cardsContainer.appendChild(cardEl);
