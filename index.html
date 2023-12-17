@@ -97,52 +97,64 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light" href="#">Boosters</a>
+              <a class="nav-link text-light" id="btn_Booster" href="#">Boosters</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light" href="#">Decks de structure</a>
+              <a class="nav-link text-light" id="btn_Decks" href="#">Decks de structure</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light" href="#">Accessoires</a>
+              <a class="nav-link text-light" id="btn_Accessoires" href="#">Accessoires</a>
             </li>
           </ul>
-          <a class="nav-link text-light panier" href="#">Panier <i class="fa-solid fa-bag-shopping"></i></a>
+          <a class="nav-link text-light panier" href="#"
+            >Panier <i class="fa-solid fa-bag-shopping"></i
+          ></a>
         </div>
       </div>
     </nav>
 
-
     <!-- Articles principale du Site (Cards) -->
-    
-    <div class="yugiCard container" id="cards-container">
 
-    </div>
+    <div class="yugiCard container row row-cols-4"  id="cards-container"></div>
 
     <!-- Bouton Scroll To Top -->
 
     <a href="#" class="returnTop"><i class="bi bi-arrow-up-square-fill"></i></a>
 
     <!-- Section Commentaire -->
-
+    <div class="divCommentaire">
     <div class="row w-50 mx-auto ">
-      <p class="commentaire" >Laissez-nous un commentaire</p>
-      <div class="col px-1">
-        <input type="text" class="form-control px-3 " placeholder="Nom">
+      <p class="commentaire">Laissez-nous un commentaire</p>
+      <div class="col px-1 nomCommentaire">
+        <p>Nom</p>
+        <input type="text" class="form-control px-3" placeholder="Muto" />
       </div>
-      <div class="col px-1">
-        <input type="text" class="form-control px-3" placeholder="Prénom" >
+      <div class="col px-1 nomCommentaire">
+        <p>Prénom</p>
+        <input type="text" class="form-control px-3" placeholder="Yugi" />
       </div>
     </div>
-    
-    <div class="mb-3 w-50 mx-auto m-3 px-1">
-      <label class="form-label"></label>
-      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email">
+
+    <div class="mb-3 w-50 mx-auto ">
+      <label class="form-label e_mail"></label>
+      <p class="nomCommentaire">Email</p>
+      <input
+        type="email"
+        class="form-control"
+        id="exampleFormControlInput1"
+        placeholder="DarkMagicianGirl69@gmail.com"
+      />
     </div>
     <div class="mb-3 w-50 mx-auto">
       <label class="form-label"></label>
-      <textarea class="form-control" rows="3" placeholder="Votre message"></textarea>
+      <p class="nomCommentaire">Commentaire</p>
+      <textarea
+        class="form-control"
+        rows="3"
+        placeholder="Unpopular opinion : Joey Wheeler aurait du gagner son duel face à Marek"
+      ></textarea>
     </div>
-
+  </div>
     <!-- Footer -->
     <footer>
       <div class="container row">
@@ -183,8 +195,10 @@
           </div>
         </div>
       </div>
+    
+      <p class="copyright">©2020 Studio Dice/SHUEISHA, TV TOKYO, KONAMI
+        ©Konami Digital Entertainment</p>
     </footer>
-
 
     <!-- Scripts -->
 

@@ -15,11 +15,11 @@
         "data": [
             {
                 "ART_ID": "1",
-                "ART_Name": "Phantom Nightmare",
+                "ART_Name": "La Collection Rareté du 25e Anniversaire",
                 "ART_Price": "60",
                 "ART_REF": "REF154152364",
-                "ART_DESC": "Booster Phantom",
-                "ART_PICTURE": "phantom.png",
+                "ART_DESC": "Booster Collection Spéciale du 25e Anniversaire",
+                "ART_PICTURE": "CollecSpe.png",
                 "ART_Stock": "50",
                 "TYP_ID": "1",
                 "S_ID": "1"

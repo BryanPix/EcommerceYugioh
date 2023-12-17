@@ -1,3 +1,4 @@
+
 body {
   background: url("../img/HieroglypheBG.jpg") repeat;
   font-family: "Roboto", sans-serif;
@@ -69,17 +70,17 @@ body {
   backface-visibility: hidden;
 }
 
-/* Stylise le coté back */
-.flip-card-back {
-  background-color: dodgerblue;
-  color: white;
-}
-
-/* Stylise le coté front */
+/* Stylise la face visible de la carte popup */
 .flip-card-front {
   background-color: #bbb;
   color: black;
   transform: rotateY(180deg);
+}
+
+/* Stylise la face caché de la carte popup (au cas ou elle ne fonctionne pas)*/
+.flip-card-back {
+  background-color: dodgerblue;
+  color: white;
 }
 
 /* Ne pas toucher, sert a centrer la card PopUP */
@@ -92,26 +93,25 @@ body {
 }
 
 /* YU GI OH CARDS */
-.yugiCard{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  margin: 1rem;
+.yugiCard {
+  display: flex;
+  justify-content: center;
 }
 
 .card {
-  cursor: pointer;
+  margin: 1rem;
 }
-.card-img-top{
+.card-img-top {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50%;
-  height: 50%;
+  cursor: pointer;
+
 }
-.btn{
+.btn {
   background-color: rgba(207, 0, 15);
 }
-.btn:hover{
+.btn:hover {
   background-color: rgba(243, 3, 19, 0.932);
 }
 /* scrollbar */
@@ -140,9 +140,9 @@ body {
   );
 }
 
- /* Bouton Scroll To Top */
- 
- .returnTop {
+/* Bouton Scroll To Top */
+
+.returnTop {
   position: sticky;
   top: 55vh;
   bottom: 40px;
@@ -153,7 +153,6 @@ body {
   justify-content: center;
   align-items: center;
   width: fit-content;
-
 }
 
 a .bi {
@@ -165,9 +164,14 @@ a :hover {
   color: rgba(255, 255, 255, 0.9);
 }
 
-
 /* Section commentaire */
-.commentaire{
+
+.divCommentaire{
+  background-color: #191d26;
+  padding: 50px 0;
+}
+
+.commentaire {
   color: white;
   text-align: center;
   text-decoration: underline 2px;
@@ -180,6 +184,9 @@ a :hover {
   border: 1.5px solid #191d26;
 }
 
+.nomCommentaire{
+  color: white;
+}
 /* Footer */
 
 footer {
@@ -241,11 +248,10 @@ ul {
 }
 
 .footer-col ul li a:hover {
-  color: #e91e63 ;
+  color: #e91e63;
   margin-left: 20px;
-  transition: 0.4s ;
+  transition: 0.4s;
   text-decoration: underline;
-  
   transform: scale(1.2);
 }
 
@@ -267,6 +273,14 @@ ul {
   background-color: #fff;
 }
 
+.copyright{
+  text-align: center;
+  margin-top: 2rem;
+  color: white;
+  font-size: 18px;
+
+}
+
 
 @media (min-width: 996px) {
   .panier:hover {
@@ -280,13 +294,16 @@ ul {
     width: 50%;
     margin-bottom: 30px;
   }
-
+  
 }
 @media (max-width: 574px) {
   .footer-col {
     width: 100%;
   }
-
+  /* Effet incroyable facilitant l'apparence quand lu sur mobile */
+  .card-body{
+    display: none;
+  }
 }
 
 /* Animation clique du PopUp */
