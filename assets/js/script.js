@@ -45,7 +45,7 @@ fetch("assets/json/ecommerce.json")
       const cartItem = document.querySelector("#cartItem");
       let cartCount = parseInt(document.querySelector("#count").textContent);
       const cartItems = [];
-      
+      let totalPrice = document.querySelector("#totalPrice");
       addToCartBtn.addEventListener("click", () => {
         const selectedArticle = Object.assign({}, article);
       
@@ -96,6 +96,8 @@ fetch("assets/json/ecommerce.json")
         displayTotalCount();
       });
 
+      
+
       cardsContainer.appendChild(cardEl);
     });
 
@@ -108,5 +110,5 @@ fetch("assets/json/ecommerce.json")
   })
   .catch((error) => console.log(error));
 
-//pagination
+
 
