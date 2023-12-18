@@ -1,4 +1,3 @@
-
 body {
   background: url("../img/HieroglypheBG.jpg") repeat;
   font-family: "Roboto", sans-serif;
@@ -35,6 +34,48 @@ body {
   cursor: pointer;
   color: white;
   margin-left: 10px;
+}
+
+.cartContainer {
+  display: none;
+  width: 30%;
+  margin: 1vh 30px 0 70%;
+  padding-right: 10px;
+}
+
+#root {
+  width: 60%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.sidebar {
+  /* width: 40%; */
+  border-radius: 5px;
+  background-color: #eee;
+  margin-left: 20px;
+  padding: 15px;
+  text-align: center;
+}
+
+.head {
+  background-color: #12151c;
+  border-radius: 3px;
+  height: 40px;
+  padding: 10px;
+  margin-bottom: 20px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.foot {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  padding: 10px 0;
+  border-top: 1px solid #333;
 }
 
 /* popup */
@@ -106,13 +147,16 @@ body {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-
 }
-.btn {
-  background-color: rgba(207, 0, 15);
+.btnCart {
+  background-color: rgba(25, 29, 38);
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 4px;
+  color: white;
 }
-.btn:hover {
-  background-color: rgba(243, 3, 19, 0.932);
+.btnCart:hover {
+  background-color: rgba(25, 29, 38, 0.932);
 }
 /* scrollbar */
 
@@ -164,9 +208,16 @@ a :hover {
   color: rgba(255, 255, 255, 0.9);
 }
 
+/* corbeille */
+.bi-trash {
+  cursor: pointer;
+}
+.btnCartRemove {
+  border: none;
+}
 /* Section commentaire */
 
-.divCommentaire{
+/* .divCommentaire{
   background-color: #191d26;
   padding: 50px 0;
 }
@@ -187,6 +238,15 @@ a :hover {
 .nomCommentaire{
   color: white;
 }
+
+#comment-container{
+  background-color: white;
+} */
+
+.form-control {
+  width: 15%;
+}
+
 /* Footer */
 
 footer {
@@ -273,14 +333,12 @@ ul {
   background-color: #fff;
 }
 
-.copyright{
+.copyright {
   text-align: center;
   margin-top: 2rem;
   color: white;
   font-size: 18px;
-
 }
-
 
 @media (min-width: 996px) {
   .panier:hover {
@@ -294,14 +352,13 @@ ul {
     width: 50%;
     margin-bottom: 30px;
   }
-  
 }
 @media (max-width: 574px) {
   .footer-col {
     width: 100%;
   }
   /* Effet incroyable facilitant l'apparence quand lu sur mobile */
-  .card-body{
+  .card-body {
     display: none;
   }
 }

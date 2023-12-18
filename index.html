@@ -70,7 +70,7 @@
     </div>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg" id="goNav">
       <div class="container-fluid">
         <a class="navbar-brand" href="#"
           ><img
@@ -106,12 +106,27 @@
               <a class="nav-link text-light" id="btn_Accessoires" href="#">Accessoires</a>
             </li>
           </ul>
-          <a class="nav-link text-light panier" href="#"
-            >Panier <i class="fa-solid fa-bag-shopping"></i
-          ></a>
+          <div class="nav-link text-light panier"><i class="fa-solid fa-cart-shopping"></i
+              > Panier <span id="count">0</span> </div>
         </div>
       </div>
+      
     </nav>
+    
+    <!-- Panier -->
+    
+    <div class="cartContainer" id="panierContainer">
+       <div id="root"></div>
+       <div class="sidebar">
+        <div class="head"><p>Mon Panier</p></div>
+        <div id="cartItem"></div>
+        <div class="foot">
+          <h3>Total</h3>
+          <h2 id="total"><span id="totalPrice">0.00</span> €</h2>
+        </div>
+       </div>
+    </div>
+
 
     <!-- Articles principale du Site (Cards) -->
 
@@ -119,10 +134,11 @@
 
     <!-- Bouton Scroll To Top -->
 
-    <a href="#" class="returnTop"><i class="bi bi-arrow-up-square-fill"></i></a>
+    <a href="#goNav" class="returnTop"><i class="bi bi-arrow-up-square-fill"></i></a>
 
     <!-- Section Commentaire -->
-    <div class="divCommentaire">
+    
+    <!-- <div class="divCommentaire">
     <div class="row w-50 mx-auto ">
       <p class="commentaire">Laissez-nous un commentaire</p>
       <div class="col px-1 nomCommentaire">
@@ -151,10 +167,18 @@
       <textarea
         class="form-control"
         rows="3"
+        id="new-comment"
         placeholder="Unpopular opinion : Joey Wheeler aurait du gagner son duel face à Marek"
       ></textarea>
     </div>
-  </div>
+    <div id="comment-container">
+      
+    </div>
+    <button id="btn-post">Post</button>
+  </div> -->
+
+
+
     <!-- Footer -->
     <footer>
       <div class="container row">
@@ -196,7 +220,7 @@
         </div>
       </div>
     
-      <p class="copyright">©2020 Studio Dice/SHUEISHA, TV TOKYO, KONAMI
+      <p class="copyright">©2023 Studio Dice/SHUEISHA, TV TOKYO, KONAMI
         ©Konami Digital Entertainment</p>
     </footer>
 
@@ -209,6 +233,6 @@
       crossorigin="anonymous"
     ></script>
     <!-- Javascript -->
-    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/script.js" defer></script>
   </body>
 </html>
